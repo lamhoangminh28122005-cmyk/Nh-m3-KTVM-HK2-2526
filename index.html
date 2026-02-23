@@ -3,292 +3,251 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nhóm 3: Chính Sách</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {margin:0;padding:0;box-sizing:border-box;}
 
-body{
-    font-family:'Inter',sans-serif;
-    background:#f4f6fa;
-    color:#111;
-    line-height:1.8;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
+body{
+    font-family:'Inter', sans-serif;
+    background:#ffffff;
+    color:#111;
+    line-height:1.7;
+    padding-top:90px;
+}
+
+/* HEADER */
+
 header{
-    padding:30px 8%;
-    background:#111;
-    color:white;
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #eee;
+    padding:25px 8%;
+    z-index:1000;
 }
 
 header h1{
-    font-family:'Playfair Display',serif;
-    font-size:22px;
+    font-size:18px;
+    font-weight:600;
+    letter-spacing:0.5px;
 }
 
+/* HERO */
+
 .hero{
-    padding:140px 8% 120px;
+    padding:180px 8% 140px;
     text-align:center;
-    background:linear-gradient(135deg,#ffffff 0%,#e9eef5 100%);
 }
 
 .hero h2{
-    font-family:'Playfair Display',serif;
-    font-size:52px;
-    max-width:950px;
+    font-size:64px;
+    font-weight:600;
+    max-width:1000px;
     margin:auto;
-    margin-bottom:30px;
+    line-height:1.1;
 }
 
 .hero p{
-    font-size:20px;
-    max-width:800px;
-    margin:auto;
+    margin-top:30px;
+    font-size:22px;
     color:#555;
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
 }
+
+/* VISUAL */
+
+.visual-intro{
+    padding:140px 8%;
+}
+
+.visual-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    max-width:1300px;
+    margin:auto;
+}
+
+.visual-item img{
+    width:100%;
+    border-radius:24px;
+    box-shadow:0 40px 100px rgba(0,0,0,0.08);
+}
+
+.caption{
+    text-align:center;
+    margin-top:18px;
+    font-size:15px;
+    color:#444;
+    font-style:italic;
+}
+
+/* SECTION */
 
 .section{
-    padding:120px 8%;
-}
-
-.section.light{
-    background:white;
-}
-
-.section.dark{
-    background:#f0f3f9;
+    padding:160px 8%;
+    max-width:1100px;
+    margin:auto;
 }
 
 .section h3{
-    font-family:'Playfair Display',serif;
-    font-size:34px;
+    font-size:42px;
     margin-bottom:50px;
-    text-align:center;
+    font-weight:600;
+}
+
+.section p{
+    font-size:19px;
+    margin-bottom:24px;
+    color:#333;
 }
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:40px;
-    max-width:1200px;
-    margin:auto;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:60px;
 }
 
 .card{
-    background:white;
-    padding:40px;
-    border-radius:18px;
-    box-shadow:0 20px 60px rgba(0,0,0,0.05);
-    transition:0.3s;
+    padding:45px;
+    border-radius:24px;
+    background:#f7f7f7;
+    transition:0.3s ease;
 }
 
 .card:hover{
-    transform:translateY(-5px);
+    background:#f0f0f0;
 }
 
 .card h4{
-    font-size:20px;
+    font-size:22px;
     margin-bottom:20px;
     font-weight:600;
 }
 
-.card p{
-    font-size:17px;
-    color:#444;
-}
-
-.image-wrap{
-    max-width:1100px;
-    margin:80px auto 0;
-}
-
-.image-wrap img{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 30px 80px rgba(0,0,0,0.1);
-}
+/* FOOTER */
 
 .footer{
-    padding:70px;
+    padding:120px;
     text-align:center;
-    background:#111;
-    color:#aaa;
+    font-size:14px;
+    color:#999;
 }
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+    .visual-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h2{
+        font-size:42px;
+    }
+
+    .section h3{
+        font-size:32px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Nhóm 3: Chính Sách</h1>
+    <h1>Nhóm 3: Chính Sách</h1>
 </header>
 
-
 <section class="hero">
-<h2>Phân tích Chính sách Tài khóa và Tiền tệ trong Kinh tế Vĩ mô Hiện đại</h2>
-<p>
-Nghiên cứu làm rõ cơ sở lý thuyết, cơ chế truyền dẫn và điều kiện phối hợp 
-giữa hai công cụ điều tiết vĩ mô nhằm ổn định chu kỳ kinh tế và kiểm soát lạm phát.
-</p>
-</section>
-  <div class="image-wrap">
-<img src="assets/files/NotebookLM Mind Map.png" alt="Mind Map">
-</div>
- <p class="caption">
-Sơ đồ tư duy tổng hợp về chính sách tài khóa và tiền tệ.
-</p>   
-
-<div class="image-wrap">
-<img src="assets/files/unnamed.png" alt="Phân tích mô hình">
-</div>
-<p class="caption">
-Hình họa phân tích chính sách kinh tế vĩ mô
-</p>   
-
-<section class="section light">
-<h3>Tổng quan hai công cụ chính sách</h3>
-
-<div class="grid">
-
-<div class="card">
-<h4>Chính sách Tài khóa</h4>
-<p>
-Công cụ điều hành thông qua chi tiêu công và thuế khóa nhằm tác động trực tiếp đến tổng cầu.
-Hiệu quả phụ thuộc vào số nhân tài khóa, cấu trúc ngân sách và độ trễ thực thi.
-</p>
-</div>
-
-<div class="card">
-<h4>Chính sách Tiền tệ</h4>
-<p>
-Được thực hiện bởi ngân hàng trung ương thông qua điều chỉnh lãi suất chính sách.
-Cơ chế truyền dẫn diễn ra qua kênh lãi suất, tín dụng và kỳ vọng.
-</p>
-</div>
-
-</div>
+    <h2>Phối hợp Chính sách Tài khóa và Chính sách Tiền tệ trong ổn định kinh tế vĩ mô</h2>
+    <p>Nghiên cứu trong khung phân tích AD–AS và IS–MP.</p>
 </section>
 
-<section class="section dark">
-<h3>Khung phân tích lý thuyết</h3>
+<section class="visual-intro">
+    <div class="visual-grid">
 
-<div class="grid">
+        <div class="visual-item">
+            <img src="assets/files/NotebookLM Mind Map.png" alt="Mind Map Chính sách">
+            <p class="caption">
+                Hình 1. Sơ đồ khung phân tích chính sách tài khóa và tiền tệ. 
+                Nguồn: Tổng hợp và biên soạn bởi Nhóm 3.
+            </p>
+        </div>
 
-<div class="card">
-<h4>Nền tảng Keynes</h4>
-<p>
-Trong ngắn hạn, tiền lương danh nghĩa và giá cả cứng nhắc khiến thị trường 
-không tự điều chỉnh nhanh về toàn dụng lao động. 
-Sản lượng thực tế do tổng cầu quyết định thay vì năng lực cung tiềm năng.
-</p>
-<p>
-Khoảng cách sản lượng (output gap) xuất hiện khi Y ≠ Y*, 
-đòi hỏi vai trò điều tiết của Nhà nước.
-</p>
-</div>
+        <div class="visual-item">
+            <img src="assets/files/unnamed.png" alt="Mô hình phân tích">
+            <p class="caption">
+                Hình 2. Cơ chế truyền dẫn chính sách trong mô hình AD–AS và IS–MP.
+            </p>
+        </div>
 
-<div class="card">
-<h4>Mô hình AD–AS</h4>
-<p>
-Đường AS ngắn hạn dốc lên do chi phí điều chỉnh tiền lương. 
-Khi tổng cầu suy giảm, AD dịch chuyển trái kéo sản lượng giảm và thất nghiệp tăng.
-</p>
-<p>
-Chính sách tài khóa mở rộng dịch chuyển AD sang phải, 
-nhưng nếu vượt quá sản lượng tiềm năng sẽ gây áp lực lạm phát.
-</p>
-</div>
-
-<div class="card">
-<h4>Mô hình IS–MP hiện đại</h4>
-<p>
-Ngân hàng trung ương điều hành lãi suất theo phản ứng với lạm phát và khoảng cách sản lượng.
-Lãi suất giảm kích thích đầu tư và tiêu dùng thông qua kênh chi phí vốn.
-</p>
-<p>
-Cơ chế truyền dẫn gồm:
-• Kênh lãi suất  
-• Kênh tín dụng  
-• Kênh kỳ vọng  
-• Kênh tài sản
-</p>
-</div>
-
-<div class="card">
-<h4>Số nhân tài khóa</h4>
-<p>
-Gia tăng chi tiêu công tạo hiệu ứng lan tỏa nhiều vòng trong nền kinh tế.
-Độ lớn số nhân phụ thuộc vào xu hướng tiêu dùng cận biên (MPC),
-mức độ mở cửa thương mại và phản ứng tiền tệ.
-</p>
-</div>
-
-<div class="card">
-<h4>Hiệu ứng lấn át</h4>
-<p>
-Nếu tài khóa mở rộng làm lãi suất tăng,
-đầu tư tư nhân có thể bị thu hẹp một phần.
-Mức độ lấn át phụ thuộc vào độ dốc đường IS và phản ứng của chính sách tiền tệ.
-</p>
-</div>
-
-<div class="card">
-<h4>Nguyên tắc phối hợp</h4>
-<p>
-Tối ưu ổn định hóa đạt được khi tài khóa và tiền tệ cùng hướng 
-trong suy thoái và phối hợp kiểm soát lạm phát khi nền kinh tế quá nóng.
-</p>
-</div>
-
-</div>
-
-<div class="card">
-<h4>Nguyên tắc phối hợp</h4>
-<p>
-Hiệu quả ổn định hóa đạt tối đa khi tài khóa và tiền tệ cùng hướng,
-tránh hiện tượng triệt tiêu hoặc lấn át chính sách.
-</p>
-</div>
-
-</div>
-
-
+    </div>
 </section>
 
-<section class="section light">
-<h3>Hàm ý chính sách</h3>
+<section class="section">
+    <h3>Khái niệm và thông tin cơ bản</h3>
 
-<div class="grid">
+    <div class="grid">
 
-<div class="card">
-<h4>Ổn định sản lượng</h4>
-<p>
-Can thiệp khi nền kinh tế lệch khỏi mức tiềm năng nhằm giảm thất nghiệp và suy thoái.
-</p>
-</div>
+        <div class="card">
+            <h4>Chính sách tài khóa</h4>
+            <p>
+                Chính sách tài khóa là việc Chính phủ điều chỉnh chi tiêu công và thuế nhằm tác động đến tổng cầu, 
+                phân phối thu nhập và ổn định chu kỳ kinh tế.
+            </p>
+            <p>
+                Công cụ chính gồm chi tiêu ngân sách (G), thuế (T) và bội chi ngân sách. 
+                Trong ngắn hạn, tài khóa có tác động trực tiếp đến sản lượng thông qua hiệu ứng số nhân.
+            </p>
+        </div>
 
-<div class="card">
-<h4>Kiểm soát lạm phát</h4>
-<p>
-Điều chỉnh lãi suất và thắt chặt tài khóa khi tổng cầu vượt mức tiềm năng.
-</p>
-</div>
+        <div class="card">
+            <h4>Chính sách tiền tệ</h4>
+            <p>
+                Chính sách tiền tệ là việc Ngân hàng Trung ương điều chỉnh cung tiền và lãi suất nhằm kiểm soát lạm phát 
+                và ổn định kinh tế vĩ mô.
+            </p>
+            <p>
+                Công cụ chủ yếu gồm lãi suất điều hành, nghiệp vụ thị trường mở và dự trữ bắt buộc. 
+                Trong mô hình hiện đại IS–MP, ngân hàng trung ương kiểm soát lãi suất theo nguyên tắc phản ứng như Taylor Rule.
+            </p>
+        </div>
 
-<div class="card">
-<h4>Tính bền vững dài hạn</h4>
-<p>
-Duy trì uy tín tiền tệ và kỷ luật ngân sách để đảm bảo ổn định vĩ mô lâu dài.
-</p>
-</div>
-
-</div>
+    </div>
 </section>
 
-<div class="footer">
-© 2026 Nhóm 3 – Báo cáo Nghiên cứu Chính sách Kinh tế
-</div>
+<section class="section">
+    <h3>Khung phân tích vĩ mô</h3>
+    <p>
+        Trong mô hình AD–AS, chính sách tài khóa và tiền tệ tác động đến tổng cầu, từ đó ảnh hưởng đến sản lượng và mức giá.
+        Khi nền kinh tế suy thoái, chính sách mở rộng giúp dịch chuyển AD sang phải; ngược lại, khi kinh tế quá nóng,
+        chính sách thắt chặt giúp kiểm soát lạm phát.
+    </p>
+
+    <p>
+        Trong mô hình IS–MP, chính sách tài khóa làm dịch chuyển đường IS, 
+        còn chính sách tiền tệ được mô tả thông qua đường MP phản ánh quy tắc điều hành lãi suất của Ngân hàng Trung ương.
+        Sự phối hợp hai chính sách quyết định hiệu quả ổn định vĩ mô trong ngắn hạn.
+    </p>
+</section>
+
+<section class="footer">
+    © 2026 Nhóm 3 – Báo cáo học thuật Kinh tế vĩ mô
+</section>
 
 </body>
 </html>
